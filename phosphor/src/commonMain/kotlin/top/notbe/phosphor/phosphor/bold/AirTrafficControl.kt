@@ -1,0 +1,72 @@
+package top.notbe.phosphor.phosphor.bold
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
+import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.ImageVector.Builder
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import top.notbe.phosphor.phosphor.BoldGroup
+
+public val BoldGroup.AirTrafficControl: ImageVector
+    get() {
+        if (_airTrafficControl != null) {
+            return _airTrafficControl!!
+        }
+        _airTrafficControl = Builder(name = "AirTrafficControl", defaultWidth = 256.0.dp,
+                defaultHeight = 256.0.dp, viewportWidth = 256.0f, viewportHeight = 256.0f).apply {
+            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(232.38f, 60.52f)
+                arcTo(20.0f, 20.0f, 0.0f, false, false, 216.0f, 52.0f)
+                horizontalLineTo(140.0f)
+                verticalLineTo(28.0f)
+                horizontalLineToRelative(12.0f)
+                arcToRelative(12.0f, 12.0f, 0.0f, false, false, 0.0f, -24.0f)
+                horizontalLineTo(104.0f)
+                arcToRelative(12.0f, 12.0f, 0.0f, false, false, 0.0f, 24.0f)
+                horizontalLineToRelative(12.0f)
+                verticalLineTo(52.0f)
+                horizontalLineTo(40.0f)
+                arcTo(20.0f, 20.0f, 0.0f, false, false, 21.2f, 78.83f)
+                lineToRelative(26.19f, 72.0f)
+                arcTo(20.06f, 20.06f, 0.0f, false, false, 66.18f, 164.0f)
+                horizontalLineTo(92.0f)
+                verticalLineToRelative(60.0f)
+                arcToRelative(12.0f, 12.0f, 0.0f, false, false, 24.0f, 0.0f)
+                verticalLineTo(164.0f)
+                horizontalLineToRelative(24.0f)
+                verticalLineToRelative(60.0f)
+                arcToRelative(12.0f, 12.0f, 0.0f, false, false, 24.0f, 0.0f)
+                verticalLineTo(164.0f)
+                horizontalLineToRelative(25.82f)
+                arcToRelative(20.06f, 20.06f, 0.0f, false, false, 18.79f, -13.17f)
+                lineToRelative(26.19f, -72.0f)
+                arcTo(20.0f, 20.0f, 0.0f, false, false, 232.38f, 60.52f)
+                close()
+                moveTo(114.0f, 140.0f)
+                lineTo(102.38f, 76.0f)
+                horizontalLineToRelative(51.24f)
+                lineTo(142.0f, 140.0f)
+                close()
+                moveTo(45.71f, 76.0f)
+                horizontalLineTo(78.0f)
+                lineToRelative(11.64f, 64.0f)
+                horizontalLineTo(69.0f)
+                close()
+                moveTo(187.0f, 140.0f)
+                horizontalLineTo(166.38f)
+                lineTo(178.0f, 76.0f)
+                horizontalLineToRelative(32.27f)
+                close()
+            }
+        }
+        .build()
+        return _airTrafficControl!!
+    }
+
+private var _airTrafficControl: ImageVector? = null
