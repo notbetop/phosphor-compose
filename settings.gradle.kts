@@ -14,6 +14,7 @@ pluginManagement {
         kotlin("multiplatform").version(kotlinVersion)
         kotlin("android").version(kotlinVersion)
         id("com.android.library").version(agpVersion)
+        id("com.android.application").version(agpVersion)
         id("org.jetbrains.compose").version(composeVersion)
     }
     resolutionStrategy {
@@ -22,6 +23,14 @@ pluginManagement {
                 useModule("com.android.tools.build:gradle:7.3.1")
             }
         }
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
 

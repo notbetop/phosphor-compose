@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "top.notbe"
-version = "1.0-SNAPSHOT"
+version = "0.1"
 
 repositories {
     google()
@@ -15,7 +15,7 @@ repositories {
 
 kotlin {
     jvm("jvm") {
-        jvmToolchain(17)
+        jvmToolchain(11)
         testRuns["test"].executionTask.configure {
             useJUnitPlatform()
         }
