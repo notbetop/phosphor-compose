@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform")
-    id("com.android.application")
+    id("com.android.library")
     id("org.jetbrains.compose")
     id("maven-publish")
 }
@@ -26,36 +26,25 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.foundation)
-                implementation(compose.material)
-                @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-                implementation(compose.components.resources)
             }
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
-            }
-        }
-        val jvmMain by getting
-        val jvmTest by getting
-        val androidMain by getting
-        val androidTest by getting {
-            dependencies {
-                implementation("junit:junit:4.13.2")
-            }
-        }
+    }
+    android {
+        publishLibraryVariants("release")
     }
 }
 
 android {
-    namespace = "top.notbe.library"
+    namespace = "top.notbe.phosphor"
     compileSdk = 32
     defaultConfig {
-        applicationId = "top.notbe.library"
         minSdk = 24
         targetSdk = 32
-        versionCode = 1
-        versionName = "1.0"
+
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     buildTypes {
         getByName("release") {
