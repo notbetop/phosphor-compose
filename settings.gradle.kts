@@ -33,9 +33,10 @@ dependencyResolutionManagement {
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
 }
+includeBuild("convention-plugins")
 
 rootProject.name = "phosphor-compose"
-include("phosphor")
+include("phosphor-compose")
 include("script")
 include("example")
 
