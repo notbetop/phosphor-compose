@@ -1,0 +1,66 @@
+package top.notbe.phosphor.phosphor.light
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathFillType.Companion.NonZero
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.StrokeCap.Companion.Butt
+import androidx.compose.ui.graphics.StrokeJoin.Companion.Miter
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.ImageVector.Builder
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+import top.notbe.phosphor.phosphor.LightGroup
+
+public val LightGroup.Bird: ImageVector
+    get() {
+        if (_bird != null) {
+            return _bird!!
+        }
+        _bird = Builder(name = "Bird", defaultWidth = 256.0.dp, defaultHeight = 256.0.dp,
+                viewportWidth = 256.0f, viewportHeight = 256.0f).apply {
+            path(fill = SolidColor(Color(0xFF000000)), stroke = null, strokeLineWidth = 0.0f,
+                    strokeLineCap = Butt, strokeLineJoin = Miter, strokeLineMiter = 4.0f,
+                    pathFillType = NonZero) {
+                moveTo(174.0f, 68.0f)
+                arcToRelative(10.0f, 10.0f, 0.0f, true, true, -10.0f, -10.0f)
+                arcTo(10.0f, 10.0f, 0.0f, false, true, 174.0f, 68.0f)
+                close()
+                moveTo(123.84f, 131.39f)
+                arcToRelative(6.0f, 6.0f, 0.0f, false, false, -8.45f, 0.77f)
+                lineToRelative(-40.0f, 48.0f)
+                arcToRelative(6.0f, 6.0f, 0.0f, true, false, 9.22f, 7.68f)
+                lineToRelative(40.0f, -48.0f)
+                arcTo(6.0f, 6.0f, 0.0f, false, false, 123.84f, 131.39f)
+                close()
+                moveTo(238.0f, 80.0f)
+                arcToRelative(6.0f, 6.0f, 0.0f, false, true, -2.67f, 5.0f)
+                lineTo(214.0f, 99.21f)
+                lineTo(214.0f, 120.0f)
+                arcTo(102.12f, 102.12f, 0.0f, false, true, 112.0f, 222.0f)
+                lineTo(8.0f, 222.0f)
+                arcToRelative(6.0f, 6.0f, 0.0f, false, true, -4.69f, -9.75f)
+                lineTo(98.0f, 93.9f)
+                lineTo(98.0f, 76.0f)
+                arcTo(58.0f, 58.0f, 0.0f, false, true, 211.51f, 59.13f)
+                lineTo(235.33f, 75.0f)
+                arcTo(6.0f, 6.0f, 0.0f, false, true, 238.0f, 80.0f)
+                close()
+                moveTo(221.18f, 80.0f)
+                lineTo(203.0f, 67.88f)
+                arcToRelative(6.0f, 6.0f, 0.0f, false, true, -2.47f, -3.48f)
+                arcTo(46.0f, 46.0f, 0.0f, false, false, 110.0f, 76.0f)
+                lineTo(110.0f, 96.0f)
+                arcToRelative(6.0f, 6.0f, 0.0f, false, true, -1.31f, 3.75f)
+                lineTo(20.48f, 210.0f)
+                lineTo(112.0f, 210.0f)
+                arcToRelative(90.1f, 90.1f, 0.0f, false, false, 90.0f, -90.0f)
+                lineTo(202.0f, 96.0f)
+                arcToRelative(6.0f, 6.0f, 0.0f, false, true, 2.67f, -5.0f)
+                close()
+            }
+        }
+        .build()
+        return _bird!!
+    }
+
+private var _bird: ImageVector? = null
